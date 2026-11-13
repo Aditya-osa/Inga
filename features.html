@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Features | Landinger - Multipurpose HTML5 CSS3 Landing Page Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Landinger - Full-featured, professional-looking software, saas and startup website template. Multipurpose HTML5 CSS3 Landing Page Template">
+    <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, css3 landing, marketing, css3, agency, digital agency, it solutions, vitejs">
+    <meta content="Coderthemes" name="author" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="bg-white sticky transition-all text-white top-0 inset-x-0 w-screen z-20 duration-300">
+    <div class="container">
+        <div class="flex items-center justify-between py-2.5 lg:py-4.5">
+            <div class="text-lg font-bold">
+                <a href="home.html">
+                    <img src="images/logo/landinger.svg" alt="Logo" class="h-8.5 lg:h-9">
+                </a>
+            </div>
+
+            <div id="navbar" class="lg:flex hidden justify-center gap-5">
+
+                <div class="m-1 hs-dropdown [--trigger:hover] relative inline-flex  transition-all duration-300">
+                    <button id="hs-dropdown-hover-event" type="button" class="hs-dropdown-toggle cursor-pointer text-dark flex items-center py-2.5 font-medium" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Home <i class="iconify tabler--chevron-down ps-5 size-4"></i>
+                    </button>
+
+                    <div class="hs-dropdown-menu border border-neutral-200 transition-[opacity,margin] rounded-2xl duration hs-dropdown-open:opacity-100 opacity-0 hidden w-60 bg-white  mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-hover-event">
+                        <div class="p-5">
+                            <a href="home.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Home 1
+                            </a>
+
+                            <a href="home-v2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Home 2
+                            </a>
+
+                            <a href="home-v3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Home 3
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="m-1 hs-dropdown [--trigger:hover] relative inline-flex  transition-all duration-300">
+                    <button id="hs-dropdown-hover-event" type="button" class="hs-dropdown-toggle cursor-pointer !no-underline text-dark flex items-center py-2.5 font-medium" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Product <i class="iconify tabler--chevron-down ps-5 size-4"></i>
+                    </button>
+
+                    <div class="hs-dropdown-menu border border-neutral-200 transition-[opacity,margin] rounded-2xl duration hs-dropdown-open:opacity-100 opacity-0 hidden w-[560px] bg-white  mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-hover-event">
+                        <div class="grid grid-cols-2 p-5 gap-5">
+                            <div>
+                                <img src="images/element/15.svg" alt="" class="rounded-2xl w-62.5">
+                            </div>
+
+                            <div class="flex flex-col justify-center gap-2.5 py-5">
+                                <a href="product-1.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                                    <div>
+                                        <i class="iconify tabler--carambola text-black size-8"></i>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-black">Seamless onboarding</div>
+                                        <p class="text-dark text-sm">Quick, easy setup.</p>
+                                    </div>
+                                </a>
+
+                                <a href="product-1.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                                    <div>
+                                        <i class="iconify tabler--settings text-black size-8"></i>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-black">Responsive design</div>
+                                        <p class="text-dark text-sm">Perfect on any device.</p>
+                                    </div>
+                                </a>
+
+                                <a href="product-2.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                                    <div>
+                                        <i class="iconify tabler--file-text text-black size-8"></i>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-black">Integrated analytics</div>
+                                        <p class="text-dark text-sm">Real-time insights.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-1 hs-dropdown [--trigger:hover] relative inline-flex">
+                    <button id="hs-dropdown-hover-event" type="button" class="hs-dropdown-toggle cursor-pointer text-dark flex items-center py-2.5 font-medium" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Pages
+                        <i class="iconify tabler--chevron-down ps-5"></i>
+                    </button>
+
+                    <div class="hs-dropdown-menu border border-neutral-200 transition-[opacity,margin] rounded-2xl duration hs-dropdown-open:opacity-100 opacity-0 hidden w-[560px] bg-white  mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-hover-event">
+                        <div class="grid grid-cols-3 p-5 gap-10">
+                            <div>
+                                <a href="product-1.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Product 1
+                                </a>
+
+                                <a href="product-2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Product 2
+                                </a>
+
+                                <a href="product-3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Product 3
+                                </a>
+
+                                <a href="pricing-1.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Pricing 1
+                                </a>
+
+                                <a href="pricing-2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Pricing 2 (Ecom)
+                                </a>
+
+                                <a href="pricing-3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Pricing 3
+                                </a>
+
+                                <a href="integrations.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Integrations
+                                </a>
+
+                                <a href="request-a-demo.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Request a Demo
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="reviews.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Reviews
+                                </a>
+
+                                <a href="about.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    About
+                                </a>
+
+                                <a href="careers.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Careers
+                                </a>
+
+                                <a href="blog.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Blog
+                                </a>
+
+                                <a href="faqs.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    FAQs
+                                </a>
+
+                                <a href="link-in-bio.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Link in Bio
+                                </a>
+
+                                <a href="coming-soon.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Coming soon
+                                </a>
+
+                                <a href="privacy-policy.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Privacy Policy
+                                </a>
+                            </div>
+
+                            <div>
+
+                                <a href="hero.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Hero
+                                </a>
+
+                                <a href="features.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Features
+                                </a>
+
+                                <a href="statistics.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Statistics
+                                </a>
+
+                                <a href="ctas.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    CTAs
+                                </a>
+
+                                <a href="cards.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                    Cards
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-1 hs-dropdown [--trigger:hover] relative inline-flex  transition-all duration-300">
+                    <button id="hs-dropdown-hover-event" type="button" class="hs-dropdown-toggle cursor-pointer text-dark flex items-center py-2.5 font-medium" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Account
+                        <i class="iconify tabler--chevron-down ps-5 size-4"></i>
+                    </button>
+
+                    <div class="hs-dropdown-menu border border-neutral-200 transition-[opacity,margin] rounded-2xl duration hs-dropdown-open:opacity-100 opacity-0 hidden w-[200px] bg-white  mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-hover-event">
+                        <div class="p-5">
+                            <a href="log-in.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Log In
+                            </a>
+
+                            <a href="sign-up.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Sign Up
+                            </a>
+
+                            <a href="reset-password.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Reset Password
+                            </a>
+
+                            <a href="update-password.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Update Password
+                            </a>
+
+                            <a href="email-confirmation.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Email Confirmation
+                            </a>
+
+                            <a href="error-404.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Error 404
+                            </a>
+
+                            <a href="password-protected.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                                Password Protected
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                    Contact us
+                </a>
+
+            </div>
+
+            <div class="flex flex-row justify-center items-center md:gap-4 gap-2.5">
+                <div class="flex items-center">
+                    <div class="text-black">Cart</div>
+                    <div class="flex justify-center items-center bg-black px-1.5 ms-2 text-1.1xl size-4.5 rounded-full">0</div>
+                </div>
+
+                <div class="md:flex hidden">
+                    <a class="bg-primary text-dark hover:text-primary hover:bg-dark rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300">Sign in</a>
+                </div>
+
+                <div class="flex lg:hidden">
+                    <button type="button" class="bg-dark  text-white focus:text-black focus:bg-primary inline-flex justify-center items-center rounded-2xl md:size-13 size-11 p-3.5 font-medium transition-all duration-300" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileMenuOffcanvas" data-hs-overlay="#mobileMenuOffcanvas">
+                        <span class="iconify tabler--menu-2 text-2xl size-5"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu (Offcanvas) -->
+<div id="mobileMenuOffcanvas" class="hs-overlay hs-overlay-open:translate-y-0 hidden -translate-y-full fixed top-4 inset-x-4 rounded-lg overflow-hidden transition-all duration-300 transform h-80 z-80 bg-white" role="dialog" tabindex="-1" aria-labelledby="mobileMenuOffcanvas-label">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-neutral-200 sticky top-0">
+        <a href="home.html">
+            <img src="images/logo/landinger.svg" alt="logo" class="h-8">
+        </a>
+
+        <button type="button" class="bg-neutral-600/15 text-neutral-600 size-8 flex justify-center items-center rounded-full" aria-label="Close" data-hs-overlay="#mobileMenuOffcanvas">
+            <span class="sr-only">Close</span>
+            <i class="iconify tabler--x size-4"></i>
+        </button>
+    </div>
+
+    <div class="flex flex-col p-4 overflow-y-auto h-[calc(100%-64px)]">
+        <div class="hs-accordion-group">
+            <div class="hs-accordion">
+                <button class="hs-accordion-toggle text-dark w-full flex items-center justify-between py-2.5 font-medium">
+                    <span>Home</span>
+                    <i class="iconify tabler--chevron-down size-4 hs-accordion-active:rotate-180 transition-all"></i>
+                </button>
+
+                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height]">
+                    <a href="home.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                        Home 1
+                    </a>
+
+                    <a href="home-v2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                        Home 2
+                    </a>
+
+                    <a href="home-v3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                        Home 3
+                    </a>
+                </div>
+            </div>
+
+            <div class="hs-accordion">
+                <button class="hs-accordion-toggle text-dark w-full flex items-center justify-between py-2.5 font-medium">
+                    <span>Product</span>
+                    <i class="iconify tabler--chevron-down size-4 hs-accordion-active:rotate-180 transition-all"></i>
+                </button>
+
+                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height]">
+                    <div class="flex flex-col mt-2">
+                        <a href="product-1.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                            <div>
+                                <i class="iconify tabler--carambola text-black size-8"></i>
+                            </div>
+
+                            <div>
+                                <div class="text-black">Seamless onboarding</div>
+                                <p class="text-dark text-sm">Quick, easy setup.</p>
+                            </div>
+                        </a>
+
+                        <a href="product-2.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                            <div>
+                                <i class="iconify tabler--settings text-black size-8"></i>
+                            </div>
+
+                            <div>
+                                <div class="text-black">Responsive design</div>
+                                <p class="text-dark text-sm">Perfect on any device.</p>
+                            </div>
+                        </a>
+
+                        <a href="product-3.html" class="flex items-center gap-1.25 p-4 transition-all duration-300 hover:bg-body-bg rounded-2xl">
+                            <div>
+                                <i class="iconify tabler--file-text text-black size-8"></i>
+                            </div>
+
+                            <div>
+                                <div class="text-black">Integrated analytics</div>
+                                <p class="text-dark text-sm">Real-time insights.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hs-accordion">
+                <button class="hs-accordion-toggle text-dark w-full flex items-center justify-between py-2.5 font-medium">
+                    <span>Pages</span>
+                    <i class="iconify tabler--chevron-down size-4 hs-accordion-active:rotate-180 transition-all"></i>
+                </button>
+
+                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height]">
+                    <div class="flex flex-col mt-2">
+                        <a href="product-1.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Product 1
+                        </a>
+
+                        <a href="product-2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Product 2
+                        </a>
+
+                        <a href="product-3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Product 3
+                        </a>
+
+                        <a href="pricing-1.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Pricing 1
+                        </a>
+
+                        <a href="pricing-2.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Pricing 2 (Ecom)
+                        </a>
+
+                        <a href="pricing-3.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Pricing 3
+                        </a>
+
+                        <a href="integrations.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Integrations
+                        </a>
+
+                        <a href="request-a-demo.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Request a Demo
+                        </a>
+
+                        <a href="reviews.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Reviews
+                        </a>
+
+                        <a href="about.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            About
+                        </a>
+
+                        <a href="careers.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Careers
+                        </a>
+
+                        <a href="blog.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Blog
+                        </a>
+
+                        <a href="faqs.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            FAQs
+                        </a>
+
+                        <a href="contact.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Contact
+                        </a>
+
+                        <a href="link-in-bio.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Link in Bio
+                        </a>
+
+                        <a href="coming-soon.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Coming soon
+                        </a>
+
+                        <a href="privacy-policy.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Privacy Policy
+                        </a>
+
+                        <a href="log-in.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Log In
+                        </a>
+
+                        <a href="sign-up.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Sign Up
+                        </a>
+
+                        <a href="reset-password.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Reset Password
+                        </a>
+
+                        <a href="update-password.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Update Password
+                        </a>
+
+                        <a href="email-confirmation.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Email Confirmation
+                        </a>
+                        <a href="error-404.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Error 404
+                        </a>
+
+                        <a href="hero.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Hero
+                        </a>
+
+                        <a href="features.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Features
+                        </a>
+
+                        <a href="statistics.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Statistics
+                        </a>
+
+                        <a href="ctas.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            CTAs
+                        </a>
+
+                        <a href="cards.html" class="flex items-center font-medium text-dark rounded-lg text-base py-1.25 hover:underline">
+                            Cards
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <a href="contact.html" class="text-dark text-base flex items-center py-2.5 font-medium hover:underline">Contact Us</a>
+            </div>
+
+            <div class="flex md:hidden mt-1">
+                <a class="w-full bg-primary text-center text-dark hover:text-primary hover:bg-dark rounded-lg px-7.5 py-3.5 font-medium transition-all duration-300">Sign in</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature Section  -->
+    <section class="bg-body-bg lg:py-25 md:py-22.5 py-17.5">
+        <div class="container">
+            <h1 class="lg:text-6xl md:text-5.5xl text-4xl mb-2.5 text-center" data-aos="fade-up" data-aos-delay="150" data-aos-duration="600" data-aos-easing="ease-in-out">Product features </h1>
+        </div>
+    </section>
+
+    <!-- Feature one Section  -->
+    <section class="bg-white py-17.5 lg:py-25 md:py-22.5">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:gap-25 md:gap-12.5 gap-7.5 items-center">
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="relative">
+                        <img src="images/about/9.png" alt="" class="rounded-2xl">
+                        <img src="images/element/3.svg" alt="" class="md:absolute border border-neutral-200 md:block md:-end-5 md:-bottom-7.5 md:w-68.75 md:rounded-2xl hidden">
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="md:mb-12.5 mb-7.5">
+                        <h1 class="lg:text-6xl md:text-5.5xl text-4xl mb-2.5">Robust analytics</h1>
+                        <p class="mb-2.5">Gain valuable insights with our powerful analytics tools.Track key
+                            metrics,generate detailed reports, and make data-driven decisions to drive your business
+                            forward.</p>
+
+                    </div>
+                    <a href="sign-up.html" class="py-3.5 px-7.5 inline-flex items-center text-center bg-dark font-medium rounded-2xl text-white transition-all duration-300 hover:text-primary">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Two Section  -->
+    <section class="lg:py-25 md:py-22.5 py-17.5">
+        <div class="container">
+            <div class="lg:mb-12.5 text-center mb-7.5">
+                <h2 class="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Key features that save time</h2>
+                <p class="text-base mb-2.5">Discover our powerful tools designed to streamline your workflow and boost
+                    productivity.</p>
+            </div>
+
+            <div class="grid md:grid-cols-8 lg:gap-12.5 gap-5 items-center">
+                <div class="md:col-span-5" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="bg-white rounded-2xl lg:p-12.5 h-full pe-0 p-4">
+                        <div class="grid md:grid-cols-2 lg:flex-row lg:gap-15 flex-col gap-7.5">
+                            <div>
+                                <div class="md:size-15 size-12.5 mb-5 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="iconify solar--chart-square-linear lg:size-7.5 size-6.5 text-dark"></i>
+                                </div>
+                                <h3 class="lg:text-2.5xl md:text-2.5xl text-1.5xl mb-2.5">Generate detailed reports
+                                    with just a few clicks.</h3>
+                                <p class="text-base lg:mt-35 md:mt-25 mt-5">Discover our powerful tools designed to
+                                    streamline your workflow and boost productivity.</p>
+                            </div>
+
+                            <div class="flex items-end relative">
+                                <img src="images/about/1.png" alt="" class="rounded-2xl flex">
+                                <img src="images/element/2.svg" alt="" class="absolute md:block md:-start-7.5 bottom-auto lg:top-22.5 hidden ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="flex lg:p-12.5 p-5 bg-dark rounded-2xl lg:gap-24 gap-15 flex-col">
+                        <div>
+                            <div class="md:size-15 size-12.5 mb-5 bg-primary rounded-full flex items-center justify-center">
+                                <i class="iconify solar--bolt-linear lg:size-7.5 size-6.5 text-dark"></i>
+                            </div>
+                            <h4 class="text-white lg:text-2.5xl md:text-2.5xl text-1.5xl mb-2.5">Work seamlessly with
+                                your team, no matter where they are</h4>
+                        </div>
+
+                        <div>
+                            <div class="gap-3.5 flex flex-col">
+                                <div class="flex gap-2.5"><i class="iconify tabler--circle-check size-6 text-primary"></i>
+                                    <div class="text-white text-base">Live editing</div>
+                                </div>
+                                <div class="flex gap-2.5"><i class="iconify tabler--circle-check size-6 text-primary"></i>
+                                    <div class="text-white text-base">Instant feedback </div>
+                                </div>
+                                <div class="flex gap-2.5"><i class="iconify tabler--circle-check size-6 text-primary"></i>
+                                    <div class="text-white text-base">Task assignments </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-primary rounded-2xl lg:p-10 p-5" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-in">
+                <div class="grid md:grid-cols-3 lg:gap-10  gap-5">
+                    <div>
+                        <h5 class="md:text-2.5xl text-1.5xl">Generate detailed reports with just a few clicks.</h5>
+                    </div>
+
+                    <div>
+                        <div class="lg:flex items-center gap-5">
+                            <h6 class="lg:text-5.5xl md:text-4.6xl text-3.4xl">99%</h6>
+                            <div class="fs-base">Track and analyze business reports</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="lg:flex items-center gap-5">
+                            <h6 class="lg:text-5.5xl md:text-4.6xl text-3.4xl">4.8</h6>
+                            <div class="gap-1 flex-col flex">
+                                <div class="flex gap-1.5">
+                                    <i class="iconify tabler--star-filled lg:size-6 size-5.5 text-dark"></i>
+                                    <i class="iconify tabler--star-filled lg:size-6 size-5.5 text-dark"></i>
+                                    <i class="iconify tabler--star-filled lg:size-6 size-5.5 text-dark"></i>
+                                    <i class="iconify tabler--star-filled lg:size-6 size-5.5 text-dark"></i>
+                                    <i class="iconify tabler--star-half-filled lg:size-6 size-5.5 text-dark"></i>
+                                </div>
+                                <div class="fs-base">Best rated company</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex md:justify-center gap-2.5 mt-10 flex-wrap justify-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-in">
+                <i class=" iconify solar--dialog-2-bold size-5.5"></i>
+                <div class="text-dark fs-base">Contact our team for more information.</div>
+
+                <a href="contact.html" class="flex items-center gap-1 text-dark font-medium">
+                    <div class="underline gap-1">Let's chat</div><i class="iconify tabler--arrow-right size-6"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Three Section  -->
+    <section class="bg-white lg:py-25 md:py-22.5 py-17.5">
+        <div class="container-small">
+            <div class="lg:mb-12.5 text-center mb-7.5" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+                <h2 class="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Why choose Landinger </h2>
+                <p class="text-base mb-2.5">Discover how Landinger can transform your business operations with our
+                    innovative features. </p>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-7.5 gap-5">
+
+                <div class="flex md:gap-4 md:flex-row gap-5 flex-col lg:p-10 p-5 bg-body-bg rounded-2xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div>
+                        <div class="size-12.5 bg-primary rounded-full inline-flex items-center justify-center">
+                            <i class="iconify solar--chart-square-linear size-6 text-black"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-2.5 md:text-1.5xl text-xl">Advance analytics </h2>
+                        <p>Tailor our platform to meet your unique business needs. </p>
+                    </div>
+                </div>
+
+                <div class="flex md:gap-4 md:flex-row gap-5 flex-col lg:p-10 p-5 bg-body-bg rounded-2xl" data-aos="fade-up" data-aos-delay="250" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div>
+                        <div class="size-12.5  bg-primary rounded-full inline-flex items-center justify-center">
+                            <i class="iconify solar--bolt-linear size-7 text-black"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-2.5 md:text-1.5xl text-xl">Seamless integration </h2>
+                        <p>It is a long established fact that a reader will be distracted by. </p>
+                    </div>
+                </div>
+
+                <div class="flex md:gap-4 md:flex-row gap-5 flex-col lg:p-10 p-5 bg-body-bg rounded-2xl" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div>
+                        <div class="size-12.5  bg-primary rounded-full inline-flex items-center justify-center">
+                            <i class="iconify solar--sale-linear size-7 text-black"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-2.5 md:text-1.5xl text-xl">Adaptive learning </h2>
+                        <p>There are many variations of passages of Lorem Ipsum available. </p>
+                    </div>
+                </div>
+
+                <div class="flex md:gap-4 md:flex-row gap-5 flex-col lg:p-10 p-5 bg-body-bg rounded-2xl" data-aos="fade-up" data-aos-delay="350" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div>
+                        <div class="size-12.5  bg-primary rounded-full inline-flex items-center justify-center">
+                            <i class="iconify solar--fire-outline size-7 text-black"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-2.5 md:text-1.5xl text-xl">24/7 availability </h2>
+                        <p>Predefined chunks as necessary, making this the first true generator. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Four Section  -->
+    <section class="lg:py-25 md:py-22.5 py-17.5">
+        <div class="container-small">
+            <div class="lg:mb-10 text-center mb-10" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <h2 class="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Key features that save time </h2>
+                <p class="text-base mb-2.5">Discover our powerful tools designed to streamline your workflow and boost
+                    productivity. </p>
+            </div>
+
+            <div class="relative" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <div id="segment-1" class="hidden" role="tabpanel" aria-labelledby="segment-item-1">
+                    <img src="images/about/13.png" alt="" class="w-full md:h-137.5 h-82.5 rounded-2xl object-cover">
+                    <div>
+                        <img src="images/element/3.svg" alt="" class="h-40 md:block hidden rounded-2xl absolute md:start-1/2 md:bottom-25 md:-translate-x-1/2">
+                    </div>
+                </div>
+
+                <div id="segment-2" class="hidden" role="tabpanel" aria-labelledby="segment-item-2">
+                    <img src="images/about/4.png" alt="" class="w-full md:h-137.5 h-82.5 rounded-2xl object-cover">
+                    <div>
+                        <img src="images/element/6.svg" alt="" class="h-40 md:block hidden rounded-2xl absolute md:start-1/2 md:bottom-25 md:-translate-x-1/2 ">
+                    </div>
+                </div>
+
+                <div id="segment-3" role="tabpanel" aria-labelledby="segment-item-3">
+                    <img src="images/about/6.png" alt="" class="w-full md:h-137.5 h-82.5 rounded-2xl object-cover">
+                    <div>
+                        <img src="images/element/7.svg" alt="" class="h-40 md:block hidden rounded-2xl absolute md:start-1/2 md:bottom-25 md:-translate-x-1/2">
+                    </div>
+                </div>
+
+                <div class="absolute top-7.5 start-1/2 -translate-x-1/2">
+                    <div class="md:flex justify-center">
+                        <div class="md:flex bg-white md:rounded-full rounded-2xl transition p-1.25">
+                            <nav class="flex md:flex-nowrap flex-wrap justify-center whitespace-nowrap" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                <button type="button" class="hs-tab-active:bg-dark text-base hs-tab-active:text-white hs-tab-active: hs-tab-active: py-2.5 md:px-5 px-2.5 inline-flex items-center gap-x-2 bg-transparent  focus:outline-hidden font-medium rounded-full  disabled:opacity-50 disabled:pointer-events-none " id="segment-item-1" aria-selected="false" data-hs-tab="#segment-1" aria-controls="segment-1" role="tab">
+                                    Dashboard & analytics
+                                </button>
+
+                                <button type="button" class="hs-tab-active:bg-dark text-base hs-tab-active:text-white hs-tab-active: hs-tab-active: py-2.5 md:px-5 px-2.5 inline-flex items-center gap-x-2 bg-transparent  focus:outline-hidden font-medium rounded-full  disabled:opacity-50 disabled:pointer-events-none" id="segment-item-2" aria-selected="false" data-hs-tab="#segment-2" aria-controls="segment-2" role="tab">
+                                    Advanced security
+                                </button>
+
+                                <button type="button" class="hs-tab-active:bg-dark text-base hs-tab-active:text-white hs-tab-active: hs-tab-active: py-2.5 md:px-5 px-2.5 inline-flex items-center gap-x-2 bg-transparent  focus:outline-hidden font-medium rounded-full  disabled:opacity-50 disabled:pointer-events-none active" id="segment-item-3" aria-selected="true" data-hs-tab="#segment-3" aria-controls="segment-3" role="tab">
+                                    Integrations
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 mt-10 gap-5" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <div>
+                    <h3 class="text-2.5xl">Integrations </h3>
+                </div>
+
+                <div>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising.</p>
+                    <a href="integrations.html" class="py-3.5 md:px-7.5 px-6 inline-flex bg-dark mt-10 font-medium rounded-2xl text-white transition-all duration-300 hover:bg-black hover:text-primary">
+                        View integrations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Five Section  -->
+    <section class="bg-white lg:py-25 md:py-22.5 py-17.5">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:gap-7.5 md:gap-5 gap-5">
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="bg-body-bg lg:p-10 p-5 rounded-2xl flex gap-7.5 flex-col">
+                        <div>
+                            <h2 class="mb-2.5 lg:text-4xl md:text-3.4xl text-2.6xl ">Scalable infrastructure for
+                                growing businesses </h2>
+                            <p class="text-base mb-2.5 ">Seamlessly expand your operations without compromising
+                                performance or reliability, ensuring. </p>
+                        </div>
+
+                        <img src="images/element/10.svg" alt="" class="rounded-2xl">
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="bg-primary lg:p-10 p-5 rounded-2xl flex gap-7.5 flex-col">
+                        <div>
+                            <h2 class="mb-2.5 lg:text-4xl md:text-3.4xl text-2.6xl ">Customizable email templates and
+                                notifications </h2>
+                            <p class="text-base mb-2.5 ">Elevate your communication with customizable email templates
+                                and notifications. </p>
+                        </div>
+
+                        <img src="images/element/11.svg" alt="" class="rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Six Section  -->
+    <section class="bg-white lg:pb-25 md:pb-22.5 pb-17.5">
+        <div class="container">
+            <div class="grid md:grid-cols-3 lg:gap-7.5 md:gap-5 gap-5">
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="bg-body-bg p-5 flex gap-7.5 flex-col rounded-2xl h-full">
+                        <h2 class="lg:text-2.6xl text-1.5xl text-center">Customizable workflows</h2>
+                        <img src="images/element/12.svg" alt="" class="rounded-2xl">
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="bg-primary p-5 flex gap-7.5 flex-col rounded-2xl h-full">
+                        <img src="images/element/13.svg" alt="" class="rounded-2xl">
+                        <h2 class="lg:text-2.6xl text-1.5xl  text-center">Adaptive learning </h2>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out">
+                    <div class="bg-dark p-5 flex gap-7.5 flex-col rounded-2xl h-full">
+                        <h2 class="lg:text-2.6xl text-1.5xl text-center text-white">Instant collaboration </h2>
+                        <img src="images/element/14.jpg" alt="" class="rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<footer class="bg-dark pt-15 pb-10 md:pt-17.5 md:pb-10 lg:pt-25 lg:pb-10 overflow-hidden">
+    <div class="container">
+        <div class="grid md:grid-cols-2 md:gap-12.5 lg:grid-cols-8 lg:gap-5 gap-10">
+            <div class="lg:col-span-3">
+                <a href="home.html">
+                    <img src="images/logo/landinger-light.svg" alt="" class="h-11" />
+                </a>
+                <p class="mt-2.5 text-white">
+                    Trusted solutions for your growing business
+                </p>
+                <div class="mt-10 flex items-center gap-3.5 md:mt-15">
+                    <h2 class="md:text-5.5xl text-4xl text-white">4.8</h2>
+                    <div>
+                        <div class="mb-1 flex gap-1.5">
+                            <i class="iconify tabler--star-filled text-xl text-orange-300"></i>
+                            <i class="iconify tabler--star-filled text-xl text-orange-300"></i>
+                            <i class="iconify tabler--star-filled text-xl text-orange-300"></i>
+                            <i class="iconify tabler--star-filled text-xl text-orange-300"></i>
+                            <i class="iconify tabler--star-filled text-xl text-orange-300"></i>
+                        </div>
+                        <div class="text-white">Best rated company</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <h4 class="text-1.5xl mb-5 text-white">Pages</h4>
+                <div class="grid grid-cols-2 md:gap-12.5 lg:gap-5 gap-2.5">
+                    <div>
+                        <ul class="flex flex-col justify-start gap-2.5 leading-normal">
+                            <li>
+                                <a href="home.html" class="text-primary">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="home-v2.html" class="hover:text-primary text-white transition-all duration-300">Home 2</a>
+                            </li>
+
+                            <li>
+                                <a href="home-v3.html" class="hover:text-primary text-white transition-all duration-300">Home 3</a>
+                            </li>
+
+                            <li>
+                                <a href="product-1.html" class="hover:text-primary text-white transition-all duration-300">Product</a>
+                            </li>
+
+                            <li>
+                                <a href="product-2.html" class="hover:text-primary text-white transition-all duration-300">Product 2</a>
+                            </li>
+
+                            <li>
+                                <a href="product-3.html" class="hover:text-primary text-white transition-all duration-300">Product 3</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="flex flex-col justify-start gap-2.5 leading-normal">
+                            <li>
+                                <a href="about.html" class="hover:text-primary text-white transition-all duration-300">About</a>
+                            </li>
+
+                            <li>
+                                <a href="request-a-demo.html" class="hover:text-primary text-white transition-all duration-300">Request a Demo</a>
+                            </li>
+
+                            <li>
+                                <a href="blog.html" class="hover:text-primary text-white transition-all duration-300">Blog
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html" class="hover:text-primary text-white transition-all duration-300">Contact</a>
+                            </li>
+
+                            <li>
+                                <a href="faqs.html" class="hover:text-primary text-white transition-all duration-300">FAQs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="privacy-policy.html" class="hover:text-primary text-white transition-all duration-300">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-2">
+                <h4 class="text-1.5xl mb-5 text-white">Contact us</h4>
+                <div>
+                    <p class="mb-3.75 text-sm text-white md:text-base">
+                        1234 Innovation drive, suite 100, tech city, CA 94043
+                    </p>
+
+                    <p class="hover:text-primary mb-3.75 text-sm text-white transition-all duration-300 md:text-base">
+                        <a href="#">(123) 456-7890</a>
+                    </p>
+
+                    <p class="hover:text-primary mb-3.75 text-sm text-white underline transition-all duration-300 md:text-base">
+                        <a href="#">example@gmail.com</a>
+                    </p>
+
+                    <div class="mt-7.5 flex items-center gap-2.5 md:mt-12.5">
+                        <div class="flex items-center">
+                            <p class="text-lg text-white">👋 Follow Us:</p>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="#" class="flex">
+                                <i class="iconify tabler--brand-meta size-5 text-white transform transition duration-300 hover:scale-110"></i>
+                            </a>
+                            <a href="#" class="flex">
+                                <i class="iconify tabler--brand-dribbble size-5 text-white transform transition duration-300 hover:scale-110"></i>
+                            </a>
+                            <a href="#" class="flex">
+                                <i class="iconify tabler--brand-linkedin size-5 text-white transform transition duration-300 hover:scale-110"></i>
+                            </a>
+                            <a href="#" class="flex">
+                                <i class="iconify tabler--brand-x size-5 text-white transform transition duration-300 hover:scale-110"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-top mt-7.5 border-neutral-700 md:mt-15">
+
+        <div class="flex justify-between pt-7.5 md:pt-10">
+            <div class="text-sm text-white">
+                ©
+                <script>document.write(new Date().getFullYear())</script>
+                <a href="#" class="underline">Landinger.</a>
+            </div>
+
+            <div class="text-sm text-white">
+                Crafted with ❤️ By <a href="#" class="underline">Coderthemes</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

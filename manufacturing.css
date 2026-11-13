@@ -1,0 +1,378 @@
+.manufacturing-page {
+  color: var(--color-neutral-700);
+}
+
+.manufacturing-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
+  color: var(--color-white);
+  background:
+    linear-gradient(90deg, rgba(7, 108, 236, 0.88), rgba(7, 108, 236, 0.48)),
+    url("images/Home/Building.png") center 42% / cover;
+}
+
+.manufacturing-hero-inner {
+  padding-block: 42px;
+}
+
+.manufacturing-breadcrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.manufacturing-breadcrumb a {
+  color: var(--color-primary);
+}
+
+.manufacturing-hero h1 {
+  max-width: 720px;
+  color: var(--color-white);
+  font-size: clamp(36px, 5vw, 58px);
+}
+
+.manufacturing-hero-inner > p:last-child {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.manufacturing-facilities-gallery {
+  padding-block: 42px;
+}
+
+.manufacturing-facilities-gallery h2 {
+  margin-bottom: 20px;
+  color: var(--color-black);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.manufacturing-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.manufacturing-facilities-grid figure {
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.manufacturing-facilities-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.manufacturing-facilities-grid figcaption {
+  padding: 12px 14px;
+  color: var(--color-neutral-700);
+  font-size: 14px;
+}
+
+.manufacturing-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  padding-block: 48px 72px;
+}
+
+.manufacturing-sidebar {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+.manufacturing-categories,
+.manufacturing-contact {
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.manufacturing-categories h2 {
+  padding: 17px 20px;
+  color: var(--color-dark);
+  background: var(--color-primary);
+  font-size: 17px;
+}
+
+.manufacturing-categories a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #eeeeee;
+  color: var(--color-neutral-700);
+  font-size: 14px;
+}
+
+.manufacturing-categories a:hover,
+.manufacturing-categories a:focus-visible {
+  color: var(--color-dark);
+  background: #f3f3e5;
+}
+
+.manufacturing-contact {
+  padding: 28px;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.manufacturing-contact-logo {
+    width: 288px;
+    height: 61px;
+    margin-bottom: 8px;
+    /* object-fit: contain; */
+    /* object-position: left center; */
+    /* filter: brightness(0) invert(1); */
+}
+
+.manufacturing-contact h2 {
+  margin-bottom: 12px;
+  color: var(--color-white);
+  font-size: 26px;
+}
+
+.manufacturing-contact p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.manufacturing-contact a {
+  display: block;
+  width: fit-content;
+  margin-top: 12px;
+  color: var(--color-primary);
+  font-size: 15px;
+}
+
+.manufacturing-content {
+  min-width: 0;
+}
+
+.manufacturing-main-image {
+  width: 100%;
+  height: clamp(240px, 38vw, 390px);
+  margin-bottom: 20px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.manufacturing-intro p,
+.manufacturing-section-lead {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.manufacturing-content-title {
+  margin-bottom: 12px;
+  color: var(--color-black);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.manufacturing-section {
+  margin-top: 38px;
+}
+
+.manufacturing-section h2 {
+  margin-bottom: 12px;
+  color: var(--color-black);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.manufacturing-dosage-section {
+  margin-top: 28px;
+}
+
+.manufacturing-dosage-section > h3 {
+  margin-bottom: 12px;
+  color: var(--color-black);
+  font-size: 22px;
+}
+
+.manufacturing-capability-cards,
+.manufacturing-other-capabilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.manufacturing-capability-card {
+  padding: 20px;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.manufacturing-capability-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.manufacturing-capability-card h3,
+.manufacturing-capability-card h4 {
+  margin-bottom: 8px;
+  color: var(--color-black);
+  font-size: 18px;
+}
+
+.manufacturing-capability-card p,
+.manufacturing-capability-card strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.manufacturing-capability-card strong {
+  color: var(--color-dark);
+}
+
+.manufacturing-other-capabilities {
+  margin-top: 18px;
+}
+
+.manufacturing-bulk-packing {
+  grid-column: 1 / -1;
+}
+
+.manufacturing-bulk-packing dl,
+.manufacturing-bulk-packing dl div {
+  display: grid;
+  gap: 5px;
+}
+
+.manufacturing-bulk-packing dl {
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.manufacturing-bulk-packing dl div {
+  padding-top: 10px;
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.manufacturing-bulk-packing dt {
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.manufacturing-bulk-packing dd {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.manufacturing-cta {
+  padding-block: 42px;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.manufacturing-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.manufacturing-cta h2 {
+  color: var(--color-white);
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.manufacturing-cta p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+}
+
+.manufacturing-cta .btn {
+  flex-shrink: 0;
+}
+
+.manufacturing-page a:focus-visible,
+.manufacturing-page summary:focus-visible,
+.manufacturing-page .btn:focus-visible {
+  outline: 3px solid var(--color-dark);
+  outline-offset: 3px;
+}
+
+.manufacturing-cta .btn:focus-visible {
+  outline-color: var(--color-white);
+}
+
+@media (min-width: 48rem) {
+  .manufacturing-facilities-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .manufacturing-layout {
+    grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.8fr);
+    gap: 34px;
+    padding-block: 60px 84px;
+  }
+
+  .manufacturing-capability-cards,
+  .manufacturing-other-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .manufacturing-cta-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 64rem) {
+  .manufacturing-capability-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-layout {
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .manufacturing-sidebar {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+  }
+
+  .manufacturing-contact {
+    padding: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manufacturing-page *,
+  .manufacturing-page *::before,
+  .manufacturing-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

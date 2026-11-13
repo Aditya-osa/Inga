@@ -447,8 +447,8 @@ input {
 }
 
 .dropdown-arrow {
-  margin-left: 20px;
-  font-size: 16px;
+  margin-left: 6px;
+  font-size: 15px;
   transition: transform var(--transition-fast);
 }
 
@@ -461,14 +461,14 @@ input {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 8px;
+  margin-top: 6px;
   background-color: var(--color-white);
   border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
+  transform: translateY(6px);
   transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
   z-index: 200;
 }
@@ -495,7 +495,9 @@ input {
 }
 
 .dropdown-menu-sm {
-  width: 240px;
+  width: auto;
+  min-width: 135px;
+  white-space: nowrap;
 }
 
 .dropdown-menu-end {
@@ -504,29 +506,33 @@ input {
 }
 
 .dropdown-menu-account {
-  width: 200px;
+  width: 180px;
 }
 
 .dropdown-inner {
-  padding: 20px;
+  padding: 8px 10px;
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .dropdown-link {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--color-dark);
-  padding-block: 5px;
-  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  border-radius: 6px;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-link:hover,
 .dropdown-link.active {
-  text-decoration: underline;
+  background-color: rgba(7, 108, 236, 0.08);
+  color: #076cec;
+  text-decoration: none;
 }
 
 /* Mega Menu: Product */

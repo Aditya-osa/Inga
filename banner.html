@@ -133,16 +133,38 @@ body {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: var(--white);
   font-size: 15px;
   font-weight: 500;
+  padding-bottom: 4px;
   transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--green-accent);
+  color: var(--white);
 }
 
 .nav-actions {

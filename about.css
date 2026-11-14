@@ -229,6 +229,8 @@
   background-color: #076cec;
 }
 
+
+
 .formulations-title {
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
   font-size: clamp(32px, 3.8vw, 46px);
@@ -275,11 +277,14 @@
 }
 
 .formulation-quadrant {
+  position: relative;
+  overflow: hidden;
   padding: 36px 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: background-color 0.25s ease;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 @media (min-width: 64rem) {
@@ -288,8 +293,23 @@
   }
 }
 
-.formulation-quadrant:hover {
-  background-color: #f8fbff;
+/* Slide-up blue background smoothly from bottom on hover */
+.formulation-quadrant:not(.formulation-quadrant-media)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #076cec 0%, #0056b3 100%);
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.formulation-quadrant:not(.formulation-quadrant-media):hover::before {
+  transform: translateY(0);
 }
 
 /* Dividing borders on 2-col desktop layout */
@@ -316,6 +336,8 @@
 }
 
 .formulation-icon-wrap {
+  position: relative;
+  z-index: 1;
   width: 52px;
   height: 52px;
   border-radius: 14px;
@@ -325,14 +347,14 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
 }
 
-.formulation-quadrant:hover .formulation-icon-wrap {
-  background-color: #076cec;
-  color: #ffffff;
+.formulation-quadrant:not(.formulation-quadrant-media):hover .formulation-icon-wrap {
+  background-color: #ffffff;
+  color: #076cec;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(7, 108, 236, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .formulation-icon {
@@ -343,10 +365,12 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  transition: stroke 0.3s ease;
+  transition: stroke 0.35s ease;
 }
 
 .formulation-card-title {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
   font-size: 22px;
   font-weight: 700;
@@ -354,14 +378,26 @@
   color: #143b5e; /* Inga navy */
   margin: 0 0 12px;
   letter-spacing: -0.01em;
+  transition: color 0.35s ease;
+}
+
+.formulation-quadrant:not(.formulation-quadrant-media):hover .formulation-card-title {
+  color: #ffffff;
 }
 
 .formulation-card-text {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 15px;
   line-height: 1.6;
   color: #45596a;
   margin: 0;
+  transition: color 0.35s ease;
+}
+
+.formulation-quadrant:not(.formulation-quadrant-media):hover .formulation-card-text {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* Quadrant 4: Image */

@@ -92,13 +92,6 @@
   color: #076cec; /* Inga blue */
 }
 
-.plant-medicine-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 44px;
-  height: 2px;
-  background-color: #076cec;
-}
 
 .plant-medicine-title {
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);

@@ -503,4 +503,18 @@
   display: block;
 }
 
+/* ==========================================================================
+   Our Values & Our Vision Section (Infographic Layout)
+   ========================================================================== */
+.values-vision-section {
+  padding-block: clamp(60px, 8vw, 100px);
+  background-color: var(--color-body-bg, #f3f3e5);
+  position: relative;
+}
+
+.values-vision-section .values-vision-wrapper {
+  margin-top: 0;
+}
+
+
 

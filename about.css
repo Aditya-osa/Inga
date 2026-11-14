@@ -19,14 +19,6 @@
     margin-bottom: 12px;
 }
 
-.history-tagline-year::before,
-.history-tagline-year::after {
-    content: "";
-    display: inline-block;
-    width: 42px;
-    height: 2px;
-    background-color: #076cec;
-}
 
 .history-top-tagline h3 {
     font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
@@ -99,13 +91,7 @@
   color: #16a34a;
 }
 
-.plant-medicine-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 40px;
-  height: 2px;
-  background-color: #16a34a;
-}
+
 
 .plant-medicine-title {
   font-size: clamp(30px, 3.2vw, 44px);

@@ -1,16 +1,51 @@
+.history-top-tagline {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
 
+.history-tagline-year {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-family: var(--font-body, "Inter", sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #076cec;
+    margin-bottom: 12px;
+}
 
-/* ==========================================================================
-   About Page Hero Tagline
-   ========================================================================== */
-.about-hero-tag {
-  display: inline-block;
-  font-size: clamp(14px, 1.8vw, 18px);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #b8ff90;
-  margin-bottom: 12px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+.history-tagline-year::before,
+.history-tagline-year::after {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background-color: #076cec;
+}
+
+.history-top-tagline h3 {
+    font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    color: #143b5e;
+    margin: 0 auto;
+    max-width: 820px;
+}
+
+.history-top-tagline p {
+    font-family: var(--font-body, "Inter", sans-serif);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-neutral-600, #525252);
+    margin: 10px auto 0;
+    max-width: 680px;
 }
 
 /* ==========================================================================

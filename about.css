@@ -83,19 +83,27 @@
 .plant-medicine-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  font-family: var(--font-body, "Inter", sans-serif);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #16a34a;
+  color: #076cec; /* Inga blue */
 }
 
-
+.plant-medicine-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 44px;
+  height: 2px;
+  background-color: #076cec;
+}
 
 .plant-medicine-title {
-  font-size: clamp(30px, 3.2vw, 44px);
-  line-height: 1.25;
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.2;
   color: #143b5e;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -104,20 +112,15 @@
 
 .plant-medicine-title .plant-medicine-accent {
   color: #076cec;
+  font-weight: 700;
 }
 
-.plant-medicine-lead {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #1e293b;
-  font-weight: 500;
-  margin: 0;
-}
-
+.plant-medicine-lead,
 .plant-medicine-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
   font-size: 16px;
   line-height: 1.65;
-  color: #475569;
+  color: #334155;
   margin: 0;
 }
 
@@ -247,7 +250,7 @@
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 16px;
   line-height: 1.65;
-  color: #45596a;
+  color: #334155;
   margin: 0;
 }
 

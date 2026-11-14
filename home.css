@@ -4544,3 +4544,135 @@ input {
 [data-aos=flip-down].aos-animate {
   transform:perspective(2500px) rotateX(0)
 }
+
+/* ==========================================================================
+   Plant Based Medicine Section (2 Column with Circle Image & Green/Blue Border)
+   ========================================================================== */
+.plant-medicine-section {
+  padding-block: 70px;
+  background-color: #ffffff;
+}
+
+@media (min-width: 48rem) {
+  .plant-medicine-section {
+    padding-block: 90px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .plant-medicine-section {
+    padding-block: 100px;
+  }
+}
+
+.plant-medicine-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .plant-medicine-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 70px;
+  }
+}
+
+.plant-medicine-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.plant-medicine-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #16a34a;
+}
+
+.plant-medicine-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: #16a34a;
+}
+
+.plant-medicine-title {
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.25;
+  color: #143b5e;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.plant-medicine-title .plant-medicine-accent {
+  color: #076cec;
+}
+
+.plant-medicine-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1e293b;
+  font-weight: 500;
+  margin: 0;
+}
+
+.plant-medicine-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+.plant-medicine-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plant-medicine-circle {
+  position: relative;
+  width: clamp(260px, 75vw, 400px);
+  height: clamp(260px, 75vw, 400px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 5px solid #076cec; /* Inga blue inner ring */
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 9px #16a34a, 0 18px 40px rgba(0, 0, 0, 0.12); /* Green outer ring + soft shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.plant-medicine-circle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 9px #16a34a, 0 24px 48px rgba(7, 108, 236, 0.22);
+}
+
+.plant-medicine-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.plant-medicine-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.plant-medicine-circle:hover .plant-medicine-img {
+  transform: scale(1.06);
+}

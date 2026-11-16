@@ -91,33 +91,51 @@ body, p, li,
   align-items: center;
   min-height: 65vh;
   color: #ffffff !important;
-  background:
-    linear-gradient(90deg, rgba(7, 108, 236, 0.90), rgba(7, 108, 236, 0.52)),
-    url("images/global.png") center center / cover no-repeat;
+  background: url("images/global.png") center center / cover no-repeat;
+}
+
+.manufacturing-hero.global-presence-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.40; /* Control black opacity here */
+}
+
+.manufacturing-hero.global-presence-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .global-presence-hero .manufacturing-hero-inner {
   padding-block: 48px;
   width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .global-presence-hero h1 {
   max-width: 780px;
   color: #ffffff !important;
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif) !important;
-  font-size: clamp(36px, 5vw, 58px) !important;
+  font-size: clamp(36px, 5vw, 92px) !important;
   font-weight: 700 !important;
   line-height: 1.15 !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 
 .global-presence-hero p {
-  margin-top: 14px !important;
-  max-width: 720px !important;
+  margin: 14px auto 0 !important;
+  max-width: 680px !important;
   font-family: var(--font-body, "Inter", sans-serif) !important;
-  font-size: 18px !important;
-  line-height: 1.65 !important;
-  color: rgba(255, 255, 255, 0.94) !important;
+  font-size: 21px !important;
+  line-height: 1.5 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-align: center !important;
 }
 
 .global-presence-hero .manufacturing-breadcrumb {

@@ -7,23 +7,30 @@
   display: flex;
   align-items: center;
   min-height: 65vh;
-  color: var(--color-white);
- background:
-    radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0.55) 0%,
-      rgba(0, 0, 0, 0.25) 57%,
-      rgba(0, 0, 0, 0.05) 100%
-    ),
-    url("./images/manufacturing.png") center 42% / cover;
+  color: var(--color-white, #ffffff);
+  background: url("./images/manufacturing.png") center 42% / cover no-repeat;
 }
 
+.manufacturing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.40; /* Control black opacity here */
+}
 
-
-
+.manufacturing-hero > * {
+  position: relative;
+  z-index: 1;
+}
 
 .manufacturing-hero-inner {
   padding-block: 42px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .manufacturing-breadcrumb {
@@ -39,14 +46,24 @@
 }
 
 .manufacturing-hero h1 {
+      white-space: nowrap;
+
   max-width: 720px;
-  color: var(--color-white);
-  font-size: clamp(36px, 5vw, 58px);
+  color: var(--color-white, #ffffff);
+  font-size: clamp(36px, 5vw, 92px);
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .manufacturing-hero-inner > p:last-child {
-  margin-top: 12px;
-  font-size: 17px;
+  margin: 14px auto 0;
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+  text-align: center;
 }
 
 .manufacturing-facilities-gallery {

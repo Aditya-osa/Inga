@@ -93,7 +93,7 @@ body, p, li,
   color: #ffffff !important;
   background:
     linear-gradient(90deg, rgba(7, 108, 236, 0.90), rgba(7, 108, 236, 0.52)),
-    url("images/map.png") center center / cover no-repeat;
+    url("images/global.png") center center / cover no-repeat;
 }
 
 .global-presence-hero .manufacturing-hero-inner {

@@ -295,18 +295,14 @@ body {
 
 .reveal-line > span {
   display: inline-block;
-  opacity: 1;
-}
-
-.slide.active .reveal-line > span {
   opacity: 0;
 }
 
-.slide.active .reveal-line:nth-child(1) > span {
+.reveal-line:nth-child(1) > span {
   animation: showText 0.01s linear 0.55s forwards;
 }
 
-.slide.active .reveal-line:nth-child(2) > span {
+.reveal-line:nth-child(2) > span {
   animation: showText 0.01s linear 0.7s forwards;
 }
 
@@ -319,11 +315,11 @@ body {
   transform-origin: left;
 }
 
-.slide.active .reveal-line:nth-child(1)::after {
+.reveal-line:nth-child(1)::after {
   animation: blockReveal 0.85s cubic-bezier(0.77, 0, 0.175, 1) 0.15s forwards;
 }
 
-.slide.active .reveal-line:nth-child(2)::after {
+.reveal-line:nth-child(2)::after {
   animation: blockReveal 0.85s cubic-bezier(0.77, 0, 0.175, 1) 0.3s forwards;
 }
 
@@ -335,9 +331,6 @@ body {
   margin-top: 10px;
   margin-bottom: 40px;
   max-width: 540px;
-}
-
-.slide.active .hero-desc {
   animation: slideFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
@@ -391,86 +384,31 @@ body {
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
 }
 
-/* RIGHT HEXAGON COLLAGE */
+/* RIGHT IMAGE VISUAL */
 .slide-visuals {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 480px;
+  width: 100%;
 }
 
-.hex-main-wrapper {
-  position: relative;
-  width: 410px;
-  height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Thin White Hexagon Outline behind main image */
-.hex-border {
-  position: absolute;
-  inset: -12px;
-  background: rgba(255, 255, 255, 0.35);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  z-index: 1;
-}
-
-.slide.active .hex-border {
-  animation: hexBorderExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
-}
-
-.hex-main {
+.hero-image-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: var(--white);
-  padding: 6px;
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  z-index: 2;
+  max-width: 580px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  animation: slideFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
-.hex-main img {
+.hero-main-img {
   width: 100%;
-  height: 100%;
+  height: clamp(340px, 42vw, 480px);
   object-fit: cover;
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-}
-
-/* Secondary Bottom-Left Hexagon */
-.hex-sub-wrapper {
-  position: absolute;
-  bottom: 55px;
-  left: -80px;
-  width: 214px;
-  height: 220px;
-  background: var(--white);
-  padding: 5px;
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  z-index: 5;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.45));
-}
-
-.slide.active .hex-main-wrapper {
-  animation: hexZoomIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
-}
-
-.slide.active .hex-sub-wrapper {
-  animation: hexPopUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
-}
-
-.hex-sub {
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-}
-
-.hex-sub img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
 }
 
 /* LEFT VERTICAL ARROWS */
@@ -651,29 +589,8 @@ body {
   transform: translateX(80px);
 }
 
-.hex-main-wrapper {
-  width: 574px;
-  height: 596px;
-  flex: 0 0 574px;
-}
-
-.hex-border {
-  inset: -4px;
-}
-
-.hex-main {
-  padding: 3px;
-}
-
-.hex-sub-wrapper {
-  width: 214px;
-  height: 220px;
-  left: -80px;
-  bottom: 55px;
-}
-
-.hex-sub img {
-  filter: sepia(1) hue-rotate(180deg) saturate(2) brightness(1.25);
+.hero-image-wrapper {
+  max-width: 620px;
 }
 
 .slider-arrows {
@@ -1136,195 +1053,27 @@ html.embedded-banner .header-topbar {
     <div class="shape-right-green"></div>
     <div class="shape-bottom-teal"></div>
 
-    <!-- Slider Wrapper -->
+    <!-- Hero Banner Content (50% Content + 50% Image Collage) -->
     <div class="slider-wrapper">
-      
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <div class="slide-container">
-          <!-- Left Text Content -->
-          <div class="slide-content">
-            <h1 class="hero-title">
-              <span class="reveal-line"><span>Making Life</span></span>
-              <span class="reveal-line"><span>Better</span></span>
-            </h1>
-            <p class="hero-desc">A legacy of pharmaceutical expertise, research and commitment to patient well-being.</p>
-       <!--     <a href="#" class="btn-primary d-none">Get Started</a>-->
-          </div>
+      <div class="slide-container">
+        <!-- Left Text Content -->
+        <div class="slide-content">
+          <h1 class="hero-title">
+            <span class="reveal-line"><span>Shaping the Future Of</span></span>
+            <span class="reveal-line"><span>Plant Based Medicine</span></span>
+          </h1>
+          <p class="hero-desc">Building on our expertise in phytochemistry, alkaloids and pharmaceutical formulations.</p>
+        </div>
 
-          <!-- Right Hexagonal Image Collage -->
-          <div class="slide-visuals">
-            <div class="hex-main-wrapper">
-              <div class="hex-border"></div>
-              <div class="hex-main">
-                <img src="https://images.unsplash.com/photo-1562789233-495f52b583dd?auto=format&fit=crop&w=1000&q=85" alt="Scientist examining a sample with a microscope">
-              </div>
-              <div class="hex-sub-wrapper">
-                <div class="hex-sub">
-                  <img src="https://images.unsplash.com/photo-1637929476734-bd7f5f78e40a?auto=format&fit=crop&w=450&q=85" alt="DNA double helix">
-                </div>
-              </div>
-            </div>
+        <!-- Right Visual (50%) -->
+        <div class="slide-visuals">
+          <div class="hero-image-wrapper">
+            <img src="https://plus.unsplash.com/premium_photo-1664474775282-cb1bfd80b5af?auto=format&fit=crop&w=1000&q=85" alt="Scientist using a microscope" class="hero-main-img">
           </div>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="slide">
-        <div class="slide-container">
-          <!-- Left Text Content -->
-          <div class="slide-content">
-            <h1 class="hero-title">
-              <span class="reveal-line"><span>Excellence Through </span></span>
-              <span class="reveal-line">Science & Innovation</span></span>
-            </h1>
-            <p class="hero-desc">Building on our expertise in phytochemistry, alkaloids and pharmaceutical formulations.</p>
-          <!--  <a href="#" class="btn-primary d-none">Get Started</a>-->
-          </div>
-
-          <!-- Right Hexagonal Image Collage -->
-          <div class="slide-visuals">
-            <div class="hex-main-wrapper">
-              <div class="hex-border"></div>
-              <div class="hex-main">
-                <img src="https://plus.unsplash.com/premium_photo-1664474775282-cb1bfd80b5af?auto=format&fit=crop&w=1000&q=85" alt="Scientist using a microscope">
-              </div>
-              <div class="hex-sub-wrapper">
-                <div class="hex-sub">
-                  <img src="https://images.unsplash.com/photo-1637929476734-bd7f5f78e40a?auto=format&fit=crop&w=450&q=85" alt="DNA double helix">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide">
-        <div class="slide-container">
-          <div class="slide-content">
-            <h1 class="hero-title">
-              <span class="reveal-line"><span>Driven by Science,</span></span>
-              <span class="reveal-line"><span>Focused on Healthcare</span></span>
-            </h1>
-            <p class="hero-desc">Combining scientific knowledge and pharmaceutical expertise to support better healthcare.</p>
-          <!--  <a href="#" class="btn-primary  d-none">Get Starated<>  -->
-          </div>
-
-          <div class="slide-visuals">
-            <div class="hex-main-wrapper">
-              <div class="hex-border"></div>
-              <div class="hex-main">
-                <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=800&q=80" alt="Medical Laboratory Analysis">
-              </div>
-              <div class="hex-sub-wrapper">
-                <div class="hex-sub">
-                  <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&q=80" alt="Microscopic Sample">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Left Vertical Navigation Arrows -->
-    <div class="slider-arrows">
-      <button id="prevSlide" class="arrow-btn" aria-label="Previous Slide"><i class="fa-solid fa-arrow-up"></i></button>
-      <button id="nextSlide" class="arrow-btn" aria-label="Next Slide"><i class="fa-solid fa-arrow-down"></i></button>
-    </div>
-
-    <!-- Bottom Left Pagination Dots -->
-    <div class="slider-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
     </div>
   </section>
-  <script>document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
-  const dots = document.querySelectorAll(".dot");
-  const prevBtn = document.getElementById("prevSlide");
-  const nextBtn = document.getElementById("nextSlide");
-  const hero = document.querySelector(".hero-section");
-
-  let currentIndex = 0;
-  let autoSlideInterval;
-  let transitionTimeout;
-
-  function replayTransition() {
-    clearTimeout(transitionTimeout);
-    hero.classList.remove("is-transitioning");
-    void hero.offsetWidth;
-    hero.classList.add("is-transitioning");
-    transitionTimeout = setTimeout(() => {
-      hero.classList.remove("is-transitioning");
-    }, 1250);
-  }
-
-  function showSlide(index) {
-    // Wrap around index
-    if (index >= slides.length) {
-      currentIndex = 0;
-    } else if (index < 0) {
-      currentIndex = slides.length - 1;
-    } else {
-      currentIndex = index;
-    }
-
-    // Remove active classes
-    slides.forEach((slide) => slide.classList.remove("active"));
-    dots.forEach((dot) => dot.classList.remove("active"));
-
-    // Activate current slide and dot
-    slides[currentIndex].classList.add("active");
-    dots[currentIndex].classList.add("active");
-    replayTransition();
-  }
-
-  function nextSlide() {
-    showSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentIndex - 1);
-  }
-
-  // Auto-play slider every 5 seconds
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 5000);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-  }
-
-  // Event Listeners for Up/Down Arrows
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-    resetAutoSlide();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-    resetAutoSlide();
-  });
-
-  // Event Listeners for Bottom Pagination Dots
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      const targetIndex = parseInt(dot.getAttribute("data-index"), 10);
-      showSlide(targetIndex);
-      resetAutoSlide();
-    });
-  });
-
-  // Initialize auto-slide
-  replayTransition();
-  startAutoSlide();
-});</script>
 
 </body>
 </html>

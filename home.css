@@ -225,16 +225,16 @@ input {
    Header Topbar
    ========================================================================== */
 .header-topbar {
-  background-color: #1e2022;
-  color: #ffffff;
-  padding-block: 7px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #feffff;
+  color: #000000;
+  padding-block: 13px;
 }
 
 .header-topbar-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .header-topbar-content {
@@ -244,8 +244,13 @@ input {
   gap: 14px;
   font-size: 13px;
   line-height: 1.2;
-  margin-left: auto;
-  margin-right: 0;
+}
+
+.header-topbar-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .topbar-social-link {
@@ -272,7 +277,7 @@ input {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 13px;
   font-weight: 500;
@@ -354,7 +359,7 @@ input {
 
 @media (min-width: 64rem) {
   .header-inner {
-    padding-block: 18px;
+    padding-block: 10px;
   }
 }
 
@@ -369,7 +374,6 @@ input {
 
 .brand-logo {
   height: 40px;
-  filter: brightness(0);
 }
 
 @media (min-width: 48rem) {
@@ -852,7 +856,6 @@ input {
 
 .drawer-logo {
   height: 40px;
-  filter: brightness(0);
 }
 
 .drawer-close-btn {

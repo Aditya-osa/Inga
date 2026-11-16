@@ -1,3 +1,38 @@
+/* ==========================================================================
+   About Hero Banner
+   ========================================================================== */
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
+  color: var(--color-white, #ffffff);
+  background:
+    linear-gradient(90deg, rgba(7, 108, 236, 0.65), rgba(7, 108, 236, 0.40)),
+    url(" images/image copy 2.png") center 42% / cover no-repeat;
+}
+
+.about-hero-inner {
+  padding-block: 42px;
+}
+
+.about-hero h1 {
+  max-width: 720px;
+  color: var(--color-white, #ffffff);
+  font-size: clamp(36px, 5vw, 58px);
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.about-hero-inner > p:last-child {
+  margin-top: 12px;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+}
+
 .history-top-tagline {
     width: 100%;
     max-width: 900px;

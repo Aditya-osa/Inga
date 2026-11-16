@@ -633,18 +633,7 @@ body {
     transform: translateX(28px);
   }
 
-  .hex-main-wrapper {
-    width: min(574px, 48vw);
-    height: min(596px, 50vw);
-    flex-basis: min(574px, 48vw);
-  }
 
-  .hex-sub-wrapper {
-    width: min(214px, 19vw);
-    height: min(220px, 19vw);
-    left: -14%;
-    bottom: 9%;
-  }
 
   .slider-dots {
     left: 40px;
@@ -736,41 +725,7 @@ body {
   }
 }
 
-@keyframes hexZoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateX(30px);
-  }
 
-  to {
-    opacity: 1;
-    transform: scale(1) translateX(0);
-  }
-}
-
-@keyframes hexBorderExpand {
-  from {
-    opacity: 0;
-    transform: scale(0.94);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes hexPopUp {
-  from {
-    opacity: 0;
-    transform: scale(0.85) translate(-20px, 20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
 
 @keyframes slideFromRight {
   from {
@@ -990,21 +945,13 @@ html.embedded-banner .header-topbar {
   }
 
   .slide-visuals {
-    height: 380px;
+    height: auto;
     transform: none;
+    margin-top: 20px;
   }
 
-  .hex-main-wrapper {
-    width: min(310px, calc(100vw - 40px));
-    height: 340px;
-    flex-basis: min(310px, calc(100vw - 40px));
-  }
-
-  .hex-sub-wrapper {
-    width: 130px;
-    height: 140px;
-    left: -15px;
-    bottom: 20px;
+  .hero-image-wrapper {
+    max-width: 100%;
   }
 
   .slider-arrows {

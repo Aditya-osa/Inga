@@ -37,23 +37,28 @@
   justify-content: center;
 }
 
-.rd-hero h1 {
-  max-width: 720px;
-  color: var(--color-white, #ffffff);
-  font-size: clamp(36px, 5vw, 92px);
-  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
-  font-weight: 700;
-  line-height: 1.15;
-  margin: 0 auto;
-  text-align: center;
+.rd-hero h1,
+.research-and-development-hero h1 {
+  max-width: 780px;
+  color: #ffffff !important;
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif) !important;
+  font-size: clamp(36px, 5vw, 92px) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 
-.rd-hero-inner > p:last-child {
-  margin: 14px auto 0;
-  font-size: 21px;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 680px;
-  text-align: center;
+.rd-hero p,
+.rd-hero-inner > p:last-child,
+.research-and-development-hero p {
+  margin: 14px auto 0 !important;
+  max-width: 680px !important;
+  font-family: var(--font-body, "Inter", sans-serif) !important;
+  font-size: 21px !important;
+  line-height: 1.5 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-align: center !important;
 }
 
 /* Main R&D Overview Section */

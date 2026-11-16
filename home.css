@@ -1015,10 +1015,10 @@ input {
    ========================================================================== */
 .home-banner {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 80vh;
   min-height: 540px;
   overflow: hidden;
-  background-color: #076cec;
+  background-color: #ffffff;
 }
 
 .home-banner-frame {

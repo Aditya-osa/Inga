@@ -38,8 +38,8 @@
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--navy-dark);
-  color: var(--white);
+  background-color: #ffffff;
+  color: #1e293b;
   overflow-x: hidden;
 }
 
@@ -47,46 +47,22 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-color: var(--navy-dark);
+  height: 80vh;
+  min-height: 80vh;
+  background-color: #ffffff;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 /* Subtle lab background photo */
 .bg-texture {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(5, 52, 125, 0.95) 0%, rgba(7, 108, 236, 0.88) 100%),
-              url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  z-index: 1;
+  display: none;
 }
 
-/* Right Geometric Green Polygon */
-.shape-right-green {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 32%;
-  height: 100%;
-  background: linear-gradient(135deg, #17b36b 0%, #109457 100%);
-  clip-path: polygon(45% 0, 100% 0, 100% 100%, 15% 100%);
-  z-index: 2;
-}
 
-/* Bottom Diagonal Teal/Green Ribbon */
-.shape-bottom-teal {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 55%;
-  height: 22%;
-  background: linear-gradient(90deg, #1aa185 0%, #15936a 100%);
-  clip-path: polygon(25% 100%, 40% 25%, 100% 25%, 100% 100%);
-  z-index: 2;
-  opacity: 0.9;
-}
+
 
 /* NAVBAR */
 .navbar {
@@ -247,19 +223,44 @@ body {
   width: 100%;
 }
 
-.slide-container {
-  max-width: 1360px;
+.slider-wrapper {
+  position: relative;
+  z-index: 10;
   width: 100%;
-  margin-inline: auto;
-  padding-inline: 30px;
-  padding-block: 40px 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
+  height: 100%;
+  flex: 1;
+  display: flex;
 }
 
-/* LEFT CONTENT */
+.slide-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  height: 100%;
+  transform: none;
+}
+
+/* LEFT CONTENT (50%) */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: clamp(30px, 8vw, 130px);
+  padding-right: clamp(24px, 4vw, 64px);
+  padding-block: 40px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
 .slide-content h1,
 .hero-title,
 .hero-title *,
@@ -267,22 +268,21 @@ body {
 .reveal-line span {
   font-family: 'Cabinet Grotesk', sans-serif !important;
   font-weight: 700;
-  line-height: 1.2em;
-  color: #ffffff;
-  font-size: 67px;
+  line-height: 1.15em;
+  color: #143b5e;
+  font-size: clamp(38px, 4.2vw, 62px);
   letter-spacing: -0.02em;
 }
 
-.slide-content h1,
-.hero-title {
-  font-size: 67px;
-
+.reveal-line:nth-child(2) span {
+  color: #076cec;
 }
 
 .hero-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0;
 }
 
 .reveal-line {
@@ -310,7 +310,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #eef2f6;
+  background-color: #076cec;
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -324,12 +324,13 @@ body {
 }
 
 .hero-desc {
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
   font-weight: 400;
-  color: var(--text-light);
-  margin-top: 10px;
-  margin-bottom: 40px;
+  color: #475569;
+  margin-top: 16px;
+  margin-bottom: 24px;
   max-width: 540px;
   animation: slideFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
@@ -384,30 +385,93 @@ body {
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
 }
 
-/* RIGHT IMAGE VISUAL */
+/* Hero Button Group */
+.hero-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  animation: slideFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  border-radius: 50px;
+  background-color: #076cec;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(7, 108, 236, 0.3);
+}
+
+.btn-hero-primary:hover {
+  background-color: #0554b7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(7, 108, 236, 0.4);
+  color: #ffffff;
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-hero-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  color: #076cec;
+}
+
+/* RIGHT IMAGE VISUAL - 50% FULL NO PADDING */
 .slide-visuals {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+  transform: none;
 }
 
 .hero-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 580px;
-  border-radius: 20px;
+  height: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   overflow: hidden;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  animation: slideFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
 .hero-main-img {
   width: 100%;
-  height: clamp(340px, 42vw, 480px);
+  height: 100%;
+  min-height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -444,47 +508,23 @@ body {
 }
 
 .hero-section {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 80vh;
+  height: 80vh;
+  background-color: #ffffff;
 }
 
-.bg-texture {
-  background:
-    linear-gradient(90deg, rgba(5, 52, 125, 0.95) 0%, rgba(7, 108, 236, 0.88) 68%, rgba(6, 90, 200, 0.84) 100%),
-    url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
-}
 
-.shape-right-green {
-  top: 16%;
-  width: 410px;
-  height: 84%;
-  background: linear-gradient(145deg, #087d58 0%, #05a85f 100%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 64% 78%, 64% 47%, 80% 37%, 80% 12%);
-}
 
-.shape-bottom-teal {
-  width: 55%;
-  height: 45%;
-  background: linear-gradient(120deg, #0ba777 0%, #06c36d 100%);
-  clip-path: polygon(56% 100%, 100% 100%, 100% 0, 88% 18%, 88% 68%);
-  opacity: 1;
-}
+
 
 .hero-section.is-transitioning {
   background-color: #076cec;
 }
 
-.hero-section.is-transitioning .bg-texture {
-  animation: backgroundReveal 1.05s ease-out both;
-}
 
-.hero-section.is-transitioning .shape-right-green {
-  animation: slideFromRight 0.8s ease-out both;
-}
 
-.hero-section.is-transitioning .shape-bottom-teal {
-  animation: slideFromRight 0.8s ease-out 0.1s both;
-}
+
+
 
 .navbar {
   padding: 29px 0 24px;
@@ -554,44 +594,7 @@ body {
   font-size: 15px;
 }
 
-.slide-container {
-  width: 100%;
-  max-width: 1360px;
-  padding-inline: 30px;
-  margin-inline: auto;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 40px;
-  transform: translateY(-20px);
-}
 
-.slide-content h1,
-.hero-title,
-.hero-title *,
-.reveal-line,
-.reveal-line span {
-  font-family: 'Cabinet Grotesk', sans-serif !important;
-  font-weight: 700;
-  line-height: 1.2em;
-  color: #ffffff;
-  font-size: 67px;
- 
-}
-
-.btn-primary {
-  padding: 14px 30px;
-  border-radius: 16px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.slide-visuals {
-  height: 600px;
-  transform: translateX(80px);
-}
-
-.hero-image-wrapper {
-  max-width: 620px;
-}
 
 .slider-arrows {
   left: 62px;
@@ -622,16 +625,7 @@ body {
     padding-right: 18px;
   }
 
-  .slide-container {
-    width: 100%;
-    max-width: 1360px;
-    padding-inline: 30px;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
 
-  .slide-visuals {
-    transform: translateX(28px);
-  }
 
 
 
@@ -765,8 +759,8 @@ body {
   .slide,
   .slide *,
   .bg-texture,
-  .shape-right-green,
-  .shape-bottom-teal,
+
+  
   .dot {
     animation: none !important;
     transition: none !important;
@@ -781,9 +775,21 @@ body {
   }
 }
 
+html.embedded-banner,
+html.embedded-banner body {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
 html.embedded-banner .navbar,
 html.embedded-banner .header-topbar {
   display: none;
+}
+
+html.embedded-banner .hero-section {
+  height: 100%;
+  min-height: 100%;
 }
 
 /* Header Topbar */
@@ -794,6 +800,15 @@ html.embedded-banner .header-topbar {
   color: #ffffff;
   padding-block: 7px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-topbar-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header-topbar-content {
@@ -910,14 +925,20 @@ html.embedded-banner .header-topbar {
 
   .slide-container {
     width: 100%;
-    max-width: 720px;
-    padding-inline: 16px;
-    margin-inline: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
     grid-template-columns: 1fr;
     text-align: center;
-    padding-block: 20px 24px;
-    row-gap: 18px;
+    row-gap: 0;
     transform: none;
+  }
+
+  .slide-content {
+    padding-inline: 24px;
+    padding-block: 40px 32px;
+    align-items: center;
+    text-align: center;
   }
 
   .slide-content h1,
@@ -928,7 +949,13 @@ html.embedded-banner .header-topbar {
     font-family: 'Cabinet Grotesk', sans-serif !important;
     font-size: clamp(30px, 9.2vw, 36px);
     line-height: 1.3em;
+    color: #143b5e;
     margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .reveal-line:nth-child(2) span {
+    color: #076cec;
   }
 
   .hero-title {
@@ -937,7 +964,16 @@ html.embedded-banner .header-topbar {
 
   .hero-desc {
     font-size: 16px;
+    color: #475569;
     margin-bottom: 24px;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
+    margin-top: 4px;
+    margin-bottom: 12px;
   }
 
   .feature-list {
@@ -945,13 +981,28 @@ html.embedded-banner .header-topbar {
   }
 
   .slide-visuals {
-    height: auto;
+    width: 100%;
+    height: 360px;
     transform: none;
-    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
   .hero-image-wrapper {
+    width: 100%;
+    height: 100%;
     max-width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .slider-arrows {
@@ -969,7 +1020,7 @@ html.embedded-banner .header-topbar {
 
   <!-- Topbar for standalone view -->
   <header class="header-topbar">
-    <div class="slide-container" style="padding-block: 8px;">
+    <div class="header-topbar-container">
       <div class="header-topbar-content">
         <a href="https://www.linkedin.com/company/ingalabs" target="_blank" rel="noopener" class="topbar-social-link" aria-label="LinkedIn">
           <svg class="topbar-icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
@@ -991,31 +1042,27 @@ html.embedded-banner .header-topbar {
     </div>
   </header>
 
-  <!-- HERO BANNER SECTION -->
+  <!-- HERO BANNER SECTION (50% Content + 50% Full-bleed Image, No Padding) -->
   <section class="hero-section">
-
-
-    <!-- Background Overlay & Decorative Shapes -->
-    <div class="bg-texture"></div>
-    <div class="shape-right-green"></div>
-    <div class="shape-bottom-teal"></div>
-
-    <!-- Hero Banner Content (50% Content + 50% Image Collage) -->
     <div class="slider-wrapper">
       <div class="slide-container">
-        <!-- Left Text Content -->
+        <!-- Left Text Content (50%) -->
         <div class="slide-content">
           <h1 class="hero-title">
             <span class="reveal-line"><span>Shaping the Future Of</span></span>
             <span class="reveal-line"><span>Plant Based Medicine</span></span>
           </h1>
           <p class="hero-desc">Building on our expertise in phytochemistry, alkaloids and pharmaceutical formulations.</p>
+          <div class="hero-btn-group">
+            <a href="contact.html" class="btn-hero-primary">Get started</a>
+            <a href="about.html" class="btn-hero-secondary">Explore Inga</a>
+          </div>
         </div>
 
-        <!-- Right Visual (50%) -->
+        <!-- Right Visual (50% Full-bleed Image, Zero Padding) -->
         <div class="slide-visuals">
           <div class="hero-image-wrapper">
-            <img src="https://plus.unsplash.com/premium_photo-1664474775282-cb1bfd80b5af?auto=format&fit=crop&w=1000&q=85" alt="Scientist using a microscope" class="hero-main-img">
+            <img src="./images/banner-facility.jpg" alt="cGMP Pharmaceutical Manufacturing Facility" class="hero-main-img">
           </div>
         </div>
       </div>

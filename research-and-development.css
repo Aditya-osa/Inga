@@ -12,30 +12,48 @@
   align-items: center;
   min-height: 65vh;
   color: var(--color-white, #ffffff);
-  background:
-    linear-gradient(90deg, rgba(7, 108, 236, 0.65), rgba(7, 108, 236, 0.40)),
-    url("./images/research-development.png") center 42% / cover no-repeat;
+  background: url("./images/research-development.png") center 42% / cover no-repeat;
+}
+
+.rd-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.40; /* Control black opacity here */
+}
+
+.rd-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .rd-hero-inner {
   padding-block: 42px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .rd-hero h1 {
   max-width: 720px;
   color: var(--color-white, #ffffff);
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(36px, 5vw, 92px);
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
   font-weight: 700;
   line-height: 1.15;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .rd-hero-inner > p:last-child {
-  margin-top: 12px;
-  font-size: 17px;
+  margin: 14px auto 0;
+  font-size: 21px;
   color: rgba(255, 255, 255, 0.9);
   max-width: 680px;
+  text-align: center;
 }
 
 /* Main R&D Overview Section */

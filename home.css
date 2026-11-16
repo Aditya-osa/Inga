@@ -3334,22 +3334,95 @@ input {
 }
 
 .product-portfolio-card {
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  background: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: visible;
+  border-radius: 20px;
+  background: var(--color-white, #ffffff);
+  border: 2px solid var(--card-theme, #8cc63f);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.product-portfolio-card:nth-child(1) {
+  --card-theme: #8cc63f;
+  --card-gradient: linear-gradient(135deg, #a3d944 0%, #7cb342 100%);
+}
+
+.product-portfolio-card:nth-child(2) {
+  --card-theme: #f5a623;
+  --card-gradient: linear-gradient(135deg, #fbc02d 0%, #f59e0b 100%);
+}
+
+.product-portfolio-card:nth-child(3) {
+  --card-theme: #f26522;
+  --card-gradient: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+}
+
+.product-portfolio-card:nth-child(4) {
+  --card-theme: #076cec;
+  --card-gradient: linear-gradient(135deg, #38bdf8 0%, #076cec 100%);
+}
+
+.product-portfolio-card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: -10px;
+  width: clamp(70px, 36%, 90px);
+  height: 58px;
+  background: var(--card-gradient, var(--card-theme, #8cc63f));
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  z-index: 3;
+  box-shadow: -7px 0 0 -2px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.product-portfolio-card:nth-child(1)::before {
+  content: "01";
+}
+
+.product-portfolio-card:nth-child(2)::before {
+  content: "02";
+}
+
+.product-portfolio-card:nth-child(3)::before {
+  content: "03";
+}
+
+.product-portfolio-card:nth-child(4)::before {
+  content: "04";
 }
 
 .product-portfolio-card img {
   width: 100%;
   aspect-ratio: 1.2;
   object-fit: cover;
+  display: block;
+  border-radius: 18px 18px 0 0;
 }
 
 .product-portfolio-card h3 {
-  padding: 14px 16px;
-  color: var(--color-dark);
-  font-size: 17px;
+  padding: 16px 18px 20px;
+  color: var(--color-dark, #076cec);
+  font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
 }
 
 .product-browse-links {

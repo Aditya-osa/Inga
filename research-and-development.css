@@ -20,7 +20,7 @@
   position: absolute;
   inset: 0;
   background: #000;
-  opacity: 0.40; /* Control black opacity here */
+  opacity: 0.85;
 }
 
 .rd-hero > * {
@@ -29,7 +29,8 @@
 }
 
 .rd-hero-inner {
-  padding-block: 42px;
+  width: 100%;
+  padding-block: 48px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -39,6 +40,7 @@
 
 .rd-hero h1,
 .research-and-development-hero h1 {
+  white-space: nowrap;
   max-width: 780px;
   color: #ffffff !important;
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif) !important;

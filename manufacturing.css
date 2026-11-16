@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   background: #000;
-  opacity: 0.40; /* Control black opacity here */
+  opacity: 0.60; /* Control black opacity here */
 }
 
 .manufacturing-hero > * {

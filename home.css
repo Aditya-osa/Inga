@@ -470,7 +470,7 @@ input {
   background-color: var(--color-white);
   border: 1px solid var(--color-neutral-200);
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-md);
+  
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
@@ -825,7 +825,7 @@ input {
   background-color: var(--color-white);
   border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+
   transform: translateY(-120%);
   transition: transform var(--transition-normal), visibility var(--transition-normal);
   z-index: 1200;
@@ -1259,7 +1259,7 @@ input {
   height: 74%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+
   border: 6px solid var(--color-white);
   z-index: 2;
 }
@@ -1476,7 +1476,7 @@ input {
   padding: 16px 20px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-neutral-200);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
   transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
@@ -3339,7 +3339,7 @@ input {
   border-radius: 20px;
   background: var(--color-white, #ffffff);
   border: 2px solid var(--card-theme, #8cc63f);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -3347,27 +3347,27 @@ input {
 
 .product-portfolio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+
 }
 
 .product-portfolio-card:nth-child(1) {
   --card-theme: #8cc63f;
-  --card-gradient: linear-gradient(135deg, #a3d944 0%, #7cb342 100%);
+  --card-gradient: linear-gradient(135deg, #bbf446 0%, #8cc63f 52%, #5b9918 100%);
 }
 
 .product-portfolio-card:nth-child(2) {
   --card-theme: #f5a623;
-  --card-gradient: linear-gradient(135deg, #fbc02d 0%, #f59e0b 100%);
+  --card-gradient: linear-gradient(135deg, #ffe066 0%, #f5a623 52%, #d07a08 100%);
 }
 
 .product-portfolio-card:nth-child(3) {
   --card-theme: #f26522;
-  --card-gradient: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+  --card-gradient: linear-gradient(135deg, #ffa352 0%, #f26522 52%, #c93b08 100%);
 }
 
 .product-portfolio-card:nth-child(4) {
   --card-theme: #076cec;
-  --card-gradient: linear-gradient(135deg, #38bdf8 0%, #076cec 100%);
+  --card-gradient: linear-gradient(135deg, #4dc3ff 0%, #076cec 52%, #0042ad 100%);
 }
 
 .product-portfolio-card::before {
@@ -3385,26 +3385,57 @@ input {
   color: #ffffff;
   font-family: var(--font-heading, "Cabinet Grotesk", sans-serif);
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   z-index: 3;
-  box-shadow: -7px 0 0 -2px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, filter 0.35s ease;
+  animation: badgeSlideIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.product-portfolio-card.aos-animate::before {
+  animation: badgeSlideIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .product-portfolio-card:nth-child(1)::before {
   content: "01";
+  animation-delay: 0.15s;
 }
 
 .product-portfolio-card:nth-child(2)::before {
   content: "02";
+  animation-delay: 0.3s;
 }
 
 .product-portfolio-card:nth-child(3)::before {
   content: "03";
+  animation-delay: 0.45s;
 }
 
 .product-portfolio-card:nth-child(4)::before {
   content: "04";
+  animation-delay: 0.6s;
+}
+
+.product-portfolio-card:hover::before {
+  transform: translateX(6px) scale(1.08);
+  
+  filter: brightness(1.06);
+}
+
+@keyframes badgeSlideIn {
+  0% {
+    transform: translateX(-45px);
+    opacity: 0;
+  }
+  65% {
+    transform: translateX(4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .product-portfolio-card img {
@@ -3441,13 +3472,13 @@ input {
   border-radius: var(--radius-md);
   color: var(--color-dark);
   background: var(--color-white);
-  box-shadow: var(--shadow-sm);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-browse-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
 }
 
 .product-browse-media {
@@ -4721,7 +4752,7 @@ input {
   background-color: #ffffff;
   border-radius: 28px;
   border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05), 0 2px 8px rgba(15, 23, 42, 0.02);
+
   padding: 44px 34px 36px;
   margin-top: 28px;
   display: flex;

@@ -2809,6 +2809,20 @@ input {
   line-height: 1.6;
 }
 
+.footer-contact-details p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-contact-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .footer-address {
   margin-bottom: 12px;
   color: rgba(255, 255, 255, 0.95);
